@@ -1,14 +1,9 @@
 <script setup lang="ts">
-// TODO: Ganti komentar di bawah dengan import gambar aerial/hutan setelah didownload
-// Rekomendasi: foto aerial hutan atau tambang dari atas, resolusi minimal 2560×1440px
 import heroImage from '@/assets/images/herosustainability.jpg'
-//
-// Untuk sementara menggunakan placeholder warna navy dari CSS
 </script>
 
 <template>
   <section class="relative h-[70vh] min-h-[520px] flex items-end overflow-hidden">
-    <!-- ── Background: ganti div ini dengan <img> setelah punya foto ── -->
     <img
       :src="heroImage"
       alt="Sustainability aerial landscape"

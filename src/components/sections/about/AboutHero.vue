@@ -1,0 +1,84 @@
+<script setup lang="ts">
+// TODO: Tambahkan gambar hero setelah didownload
+//
+// import heroMineral from '@/assets/images/abouthero.png'
+//   → Rekomendasi: foto mineral kristal / latar putih bersih atau transparan
+//     agar terlihat elegan di atas overlay putih. PNG transparan, min 800×800px
+//
+// Untuk latar belakang (opsional):
+// import heroBg from '@/assets/images/aboutherobg.jpg'
+//   → Rekomendasi: foto interior laboratorium atau gedung modern, min 2560×1440px
+</script>
+
+<template>
+  <section class="relative min-h-[70vh] flex items-center overflow-hidden bg-white">
+    <!-- ── Latar opsional ─────────────────────────────────────────── -->
+    <!--
+      TODO: Aktifkan setelah punya foto heroBg
+      <img
+        src="@/assets/images/aboutherobg.jpg"
+        alt="About Us background"
+        class="absolute inset-0 w-full h-full object-cover object-center opacity-20"
+        loading="eager" fetchpriority="high" decoding="sync"
+        style="transform:translateZ(0)"
+      />
+    -->
+
+    <!-- Dekoratif: garis halus di kanan -->
+    <div
+      class="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none hidden lg:block"
+      style="background: linear-gradient(270deg, rgba(201, 168, 76, 0.04) 0%, transparent 60%)"
+    ></div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-28 lg:py-36">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- ── Kiri: Teks ──────────────────────────────────────────── -->
+        <div>
+          <p
+            class="text-[10px] font-bold tracking-[0.22em] text-gold uppercase mb-5 animate-fade-in"
+          >
+            Since 1994
+          </p>
+          <h1
+            class="font-newsreader text-primary font-normal leading-[1.08] animate-fade-in-up"
+            style="font-size: clamp(2.6rem, 5vw, 4.2rem); animation-delay: 0.15s"
+          >
+            Leading the Mineral Resilience
+          </h1>
+          <p
+            class="text-gray-500 text-[15px] font-light leading-relaxed mt-6 max-w-lg animate-fade-in-up"
+            style="animation-delay: 0.3s"
+          >
+            Pioneering sustainable extraction methods since our founding in 1994, Aruna Mineral has
+            grown from a single concession to a globally recognized leader in responsible mineral
+            sourcing.
+          </p>
+        </div>
+
+        <!-- ── Kanan: Gambar mineral/kristal ─────────────────────── -->
+        <div
+          class="flex justify-center lg:justify-end animate-fade-in"
+          style="animation-delay: 0.35s"
+        >
+          <!--
+            TODO: Aktifkan setelah punya gambar mineral kristal
+            <img
+              src="@/assets/images/abouthero.png"
+              alt="Aruna Mineral crystal"
+              class="w-72 h-72 lg:w-96 lg:h-96 object-contain drop-shadow-xl"
+              style="transform:translateZ(0)"
+            />
+          -->
+          <!-- Placeholder sementara -->
+          <div
+            class="w-72 h-72 lg:w-96 lg:h-96 flex items-center justify-center border border-gray-100 bg-gray-50"
+          >
+            <p class="text-gray-300 text-xs text-center px-8">
+              [abouthero.png<br />800×800px PNG mineral/kristal]
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
