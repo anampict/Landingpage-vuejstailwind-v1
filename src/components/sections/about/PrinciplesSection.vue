@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
-// Icon sudah tersedia di folder icons
 import iconInnovation from '@/assets/icons/iconPrecision.svg'
 import iconSafety from '@/assets/icons/iconSafetyFirst.svg'
 import iconResponsibility from '@/assets/icons/iconGovernance.svg'
@@ -25,7 +24,7 @@ const principles = [
     icon: iconResponsibility,
     title: 'Responsibility',
     desc: 'Extracting value from the earth imposes obligations. We honour those obligations through community investment, land restoration, and transparent governance.',
-    active: true,
+    active: false,
   },
 ]
 </script>

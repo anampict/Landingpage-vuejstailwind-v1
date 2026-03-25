@@ -1,28 +1,20 @@
 <script setup lang="ts">
-// TODO: Tambahkan gambar hero setelah didownload
-//
-// import heroMineral from '@/assets/images/abouthero.png'
-//   → Rekomendasi: foto mineral kristal / latar putih bersih atau transparan
-//     agar terlihat elegan di atas overlay putih. PNG transparan, min 800×800px
-//
-// Untuk latar belakang (opsional):
-// import heroBg from '@/assets/images/aboutherobg.jpg'
-//   → Rekomendasi: foto interior laboratorium atau gedung modern, min 2560×1440px
+import heroMineral from '@/assets/images/herosectionabout3.jpg'
 </script>
 
 <template>
-  <section class="relative min-h-[70vh] flex items-center overflow-hidden bg-white">
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-white">
     <!-- ── Latar opsional ─────────────────────────────────────────── -->
-    <!--
-      TODO: Aktifkan setelah punya foto heroBg
-      <img
-        src="@/assets/images/aboutherobg.jpg"
-        alt="About Us background"
-        class="absolute inset-0 w-full h-full object-cover object-center opacity-20"
-        loading="eager" fetchpriority="high" decoding="sync"
-        style="transform:translateZ(0)"
-      />
-    -->
+
+    <img
+      :src="heroMineral"
+      alt="About Us background"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+      loading="eager"
+      fetchpriority="high"
+      decoding="sync"
+      style="transform: translateZ(0)"
+    />
 
     <!-- Dekoratif: garis halus di kanan -->
     <div
@@ -53,30 +45,6 @@
             grown from a single concession to a globally recognized leader in responsible mineral
             sourcing.
           </p>
-        </div>
-
-        <!-- ── Kanan: Gambar mineral/kristal ─────────────────────── -->
-        <div
-          class="flex justify-center lg:justify-end animate-fade-in"
-          style="animation-delay: 0.35s"
-        >
-          <!--
-            TODO: Aktifkan setelah punya gambar mineral kristal
-            <img
-              src="@/assets/images/abouthero.png"
-              alt="Aruna Mineral crystal"
-              class="w-72 h-72 lg:w-96 lg:h-96 object-contain drop-shadow-xl"
-              style="transform:translateZ(0)"
-            />
-          -->
-          <!-- Placeholder sementara -->
-          <div
-            class="w-72 h-72 lg:w-96 lg:h-96 flex items-center justify-center border border-gray-100 bg-gray-50"
-          >
-            <p class="text-gray-300 text-xs text-center px-8">
-              [abouthero.png<br />800×800px PNG mineral/kristal]
-            </p>
-          </div>
         </div>
       </div>
     </div>

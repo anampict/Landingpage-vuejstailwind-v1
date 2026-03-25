@@ -1,15 +1,7 @@
 <script setup lang="ts">
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
-// TODO: Tambahkan gambar peta dunia setelah didownload
-//
-// import worldMapImage from '@/assets/images/worldmap.png'
-//   → Rekomendasi: ilustrasi peta dunia minimal/flat (PNG transparan atau putih),
-//     dengan titik-titik lokasi. Style: monochrome atau teal/hijau seperti di Figma.
-//     Ukuran min 1600×900px
-//
-// Untuk versi lebih keren, bisa juga SVG peta dunia:
-// import worldMapImage from '@/assets/images/worldmap.svg'
+import worldMapImage from '@/assets/images/maplocation.jpg'
 
 useScrollReveal()
 
@@ -82,32 +74,17 @@ const offices = [
         </div>
 
         <!-- ── Kanan: Peta dunia ──────────────────────────────────── -->
-        <div
-          class="reveal reveal--right bg-gray-50 border border-gray-100 aspect-[4/3] flex items-center justify-center overflow-hidden relative"
-          style="transition-delay: 0.2s"
-        >
-          <!--
-            TODO: Aktifkan setelah punya gambar peta dunia
-            <img
-              src="@/assets/images/worldmap.png"
-              alt="Global operational footprint"
-              class="w-full h-full object-contain p-6"
-              style="transform:translateZ(0)"
-            />
-            Titik-titik lokasi (opsional, bisa ditambah di atas peta):
-            <div class="absolute" style="top:52%; left:52%">
-              <span class="block w-2.5 h-2.5 rounded-full bg-gold animate-ping absolute"></span>
-              <span class="block w-2.5 h-2.5 rounded-full bg-gold relative"></span>
-            </div>
-          -->
 
-          <!-- Placeholder sementara -->
-          <div class="text-center p-8">
-            <p class="text-gray-300 text-xs leading-relaxed">
-              [worldmap.png<br />1600×900px — peta dunia flat/illustrasi<br />dengan titik Jakarta,
-              Perth, Singapore]
-            </p>
-          </div>
+        <img
+          :src="worldMapImage"
+          alt="Global operational footprint"
+          class="w-full h-full object-contain p-6"
+          style="transform: translateZ(0)"
+        />
+
+        <div class="absolute" style="top: 52%; left: 52%">
+          <span class="block w-2.5 h-2.5 rounded-full bg-gold animate-ping absolute"></span>
+          <span class="block w-2.5 h-2.5 rounded-full bg-gold relative"></span>
         </div>
       </div>
     </div>
