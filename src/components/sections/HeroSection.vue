@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import heroImage from '@/assets/images/herosectionhome.png'
+import heroImage from '@/assets/images/herosectionhome.jpg'
 </script>
 
 <template>
@@ -12,6 +12,8 @@ import heroImage from '@/assets/images/herosectionhome.png'
         class="w-full h-full object-cover object-center"
         loading="eager"
         fetchpriority="high"
+        decoding="sync"
+        style="transform: translateZ(0); will-change: auto"
       />
       <!-- Layer 1: base dark scrim across entire image -->
       <div class="absolute inset-0 bg-primary/55"></div>
