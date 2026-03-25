@@ -11,7 +11,7 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { label: 'HOME', routerTo: '/' },
-  { label: 'SUSTAINABILITY', href: '#sustainability' },
+  { label: 'SUSTAINABILITY', routerTo: '/sustainability' },
   { label: 'PROJECTS', href: '#projects' },
   { label: 'ABOUT US', href: '#about' },
 ]
@@ -24,6 +24,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+    },
+    {
+      path: '/sustainability',
+      name: 'sustainability',
+      component: () => import('../views/SustainabilityView.vue'),
     },
     {
       path: '/about',
